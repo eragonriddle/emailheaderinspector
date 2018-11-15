@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>EHI Office Add-In</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
+html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
+.w3-bar-block .w3-bar-item {padding: 16px}
+</style>
+<body>
+
+<!-- Side Navigation -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large"><img src="/Images/sidebar_logo.png" style="width:60%;"></a>
+  <div class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align">New Message <i class="w3-padding fa fa-pencil"></i></div>
+  <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Inbox (2)<i class="fa fa-caret-down w3-margin-left"></i></a>
+  <div id="Demo1" class="w3-hide w3-animate-left">
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('MainPage');w3_close();">
+      <div class="w3-container">
+        <img class="w3-round w3-margin-right" src="/Images/logo_32.png" style="width:15%;"><span class="w3-opacity w3-large">Main Page</span>
+        <p>Welcome!</p>
+      </div>
+    </a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('FAQ');w3_close();" id="firstTab">
+      <div class="w3-container">
+        <img class="w3-round w3-margin-right" src="/Images/logo_32.png" style="width:15%;"><span class="w3-opacity w3-large">Support Page</span>
+        <h6>Subject: EHI FAQ</h6>
+        <p>Frequently asked questions and answers...</p>
+      </div>
+    </a>
+  </div>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Sent</a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Drafts</a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+</nav>
+
+<!-- Overlay effect when opening the side navigation on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
+
+<!-- Page content -->
+<div class="w3-main" style="margin-left:320px;">
+<i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
+<a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
+
+<div id="FAQ" class="w3-container person">
+  <br>
+  <img class="w3-round  w3-animate-top" src="/Images/email_property_inspector.png" style="width:20%;">
+  <h5 class="w3-opacity">Subject: EHI FAQ</h5>
+  <h4><i class="fa fa-clock-o"></i> Checking your outlook email headers...</h4>
+  <a class="w3-button w3-light-grey" href="#">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-light-grey" href="#">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <hr>
+  <p>
+  	<b>What is EHI?</b>
+	<br/>
+	<i>Email Header Inspector (EHI) is an Office 365 add-in for Outlook.</i>
+  </p>
+  <p>
+  	<b>What is EHI used for?</b>
+	<br/>
+	<i>EHI is used to list the properties from an email header. Some of these properties are not immediately listed in the default email view. This add-on fetches the email header and displays select properties from the email header. In addition it also fetches the IP address of the sender and attempts to map this IP address to a geolocation.</i>
+	<p>Note: This product includes GeoLite2 data created by MaxMind, available from <a href="http://www.maxmind.com">http://www.maxmind.com</a>.</p>
+	<p>Note: The HTML &#38 CSS template for this support page is from W3Schools and has been modified. The original template is available at <a href="https://www.w3schools.com/w3css/tryw3css_templates_mail.htm">W3Schools</a>.</p>
+	<p>Note: The flag images for this project were obtained from <a href="https://github.com/googlei18n/region-flags">googlei18n project</a>.
+  </p>
+  <p>
+  	<b>What properties are returned by EHI?</b>
+	<br/>
+	<i>EHI lists the following properties from the email header: </i>
+	<ul>
+		<li>Email address of sender</li>
+		<li>Name of sender</li>
+		<li>Email creation time</li>
+		<li>Email modification time</li>
+		<li>Email deferred time (if available)</li>
+		<li>Email originating IP address</li>
+		<ul>
+			<li>IP address geolocation</li>
+			<li>IP address ASN (Autonomous System Number)</li>
+		</ul>
+	</ul>
+  </p>
+  <p>
+  	<b>Why use EHI?</b>
+	<br/>
+	<i>EHI can help check the sender and originating IP to help make an analysis for suspicious emails..</i>
+  </p>
+  <p>
+  	<b>Do I have to pay to use EHI</b>
+	<br/>
+	<i>This project is made open-source in the public domain. You are free to use this project. This project needs to be hosted on a webserver for queries to the IP geolocation api to work.</i>
+  </p>
+  <p>
+  	<b>What is needed to run this project?</b>
+	<br/>
+	<i>This project was built in .netcore 2.1. It can be hosted on Windows, Mac or Linux systems. Once the webserver is running download the EmailHeaderInspector.xml file and install it for your Outlook client. Check <a href="https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/install-or-remove-outlook-add-ins">office docs</a> for more information on installing or removing add-ins in Outlook.</i>
+  </p>
+  <p>Best Regards, <br>Eragon Riddle</p>
+</div>
+
+<div id="MainPage" class="w3-container person">
+  <br>
+  <img class="w3-round w3-animate-top" src="/Images/email_property_inspector.png" style="width:20%;">
+  <h5 class="w3-opacity">Subject: New Add-In</h5>
+  <h4><i class="fa fa-clock-o"></i> A Simple Outlook Add-In</h4>
+  <a class="w3-button w3-light-grey">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-light-grey">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <hr>
+  <p>Welcome.</p>
+  <p>That's it!</p>
+  <p>Example add-in result:</p>
+  <img src="/Images/ehi_example.png" style="width:30%;">
+</div>
+     
+</div>
+
+<script>
+var openInbox = document.getElementById("myBtn");
+openInbox.click();
+
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+function myFunc(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show"; 
+        x.previousElementSibling.className += " w3-red";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-red", "");
+    }
+}
+
+openMail("MainPage")
+function openMail(personName) {
+    var i;
+    var x = document.getElementsByClassName("person");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    x = document.getElementsByClassName("test");
+    for (i = 0; i < x.length; i++) {
+       x[i].className = x[i].className.replace(" w3-light-grey", "");
+    }
+    document.getElementById(personName).style.display = "block";
+    event.currentTarget.className += " w3-light-grey";
+}
+</script>
+
+<script>
+var openTab = document.getElementById("firstTab");
+openTab.click();
+</script>
+
+</body>
+</html> 
