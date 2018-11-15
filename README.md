@@ -5,7 +5,6 @@ EHI is used to list the properties from an email header. Some of these propertie
 
 To run, clone the project and dotnet run or start from visual studio.
 ![alt text](https://github.com/eragonriddle/emailheaderinspector/raw/master/wwwroot/Images/ehi_example.png)
-
 Note: This product includes GeoLite2 data created by MaxMind, available from http://www.maxmind.com.
 
 Note: The HTML & CSS template for this support page is from W3Schools and has been modified. The original template is available at https://www.w3schools.com.
